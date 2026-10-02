@@ -1,0 +1,57 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+build/
+release/
+out/
+dist-electron/
+
+# Caching & Test
+.eslintcache
+.stylelintcache
+coverage/
+tsconfig.tsbuildinfo
+.next/
+.nuxt/
+
+# Desktop / Executables
+*.exe
+*.dll
+*.so
+*.dylib
+*.dmg
+src-tauri/target/
+
+# Agent/IDE specific
+.gemini/
