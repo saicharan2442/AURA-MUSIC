@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Minus, Moon, Search, Square, Sun, Wifi, WifiOff, X } from 'lucide-react';
 import { useSettings } from '../store/settings';
 import { useUI } from '../store/ui';
@@ -78,7 +79,26 @@ export function TopBar() {
         )}
       </div>
 
-      <div className="flex-1" />
+      <div className="flex-1 flex justify-end mr-3">
+        <div 
+          className="relative flex items-center h-[32px] rounded-full bg-[color-mix(in_srgb,var(--text)_4%,transparent)] border border-[color-mix(in_srgb,var(--text)_8%,transparent)] overflow-hidden w-[240px]"
+          style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)', maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)' }}
+        >
+          <motion.div
+            className="flex items-center gap-2.5 whitespace-nowrap absolute"
+            initial={{ x: 240 }}
+            animate={{ x: -280 }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          >
+            <span className="text-[10px] font-bold text-soft uppercase tracking-[0.25em]">
+              Developed by
+            </span>
+            <span className="text-[12px] font-black uppercase tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-[#3fd4ff] via-[#b26bff] to-[#ff5fb0]">
+              Saicharan Sada
+            </span>
+          </motion.div>
+        </div>
+      </div>
 
       {/* status + quick actions */}
       <div className="flex items-center gap-1">
