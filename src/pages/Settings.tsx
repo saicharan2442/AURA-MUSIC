@@ -223,7 +223,7 @@ export default function Settings() {
               <input
                 className="input !h-9 !w-[220px] !text-[12.5px]"
                 placeholder="e.g. 8e4f3a2b"
-                value={s.jamendoKey}
+                value={s.jamendoKey || ''}
                 onChange={(e) => s.set({ jamendoKey: e.target.value.trim() })}
                 aria-label="Jamendo client ID"
                 spellCheck={false}
@@ -233,7 +233,7 @@ export default function Settings() {
               <input
                 className="input !h-9 !w-[220px] !text-[12.5px]"
                 placeholder="https://music.example.com"
-                value={s.customSourceUrl}
+                value={s.customSourceUrl || ''}
                 onChange={(e) => s.set({ customSourceUrl: e.target.value.trim() })}
                 aria-label="Custom source URL"
                 spellCheck={false}
@@ -254,7 +254,7 @@ export default function Settings() {
               <input
                 className="input !h-9 !w-[220px] !text-[12.5px]"
                 placeholder="AIzaSyB..."
-                value={s.youtubeKey}
+                value={s.youtubeKey || ''}
                 onChange={(e) => s.set({ youtubeKey: e.target.value.trim() })}
                 aria-label="YouTube API Key"
                 spellCheck={false}

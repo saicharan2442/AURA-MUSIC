@@ -1,4 +1,4 @@
-import type { HomeFeed, SearchResults, Track } from '../types';
+
 import type { MusicProvider } from './provider';
 import { ProviderError } from './provider';
 import { itunesProvider } from './itunes';
@@ -87,8 +87,8 @@ async function aggregate<T>(
   }));
   
   const successful = results
-    .filter((r): r is PromiseFulfilledResult<T> => r.status === 'fulfilled')
-    .map(r => r.value);
+    .filter((r) => r.status === 'fulfilled')
+    .map((r: any) => r.value as T);
     
   if (successful.length === 0) {
     const firstErr = results.find(r => r.status === 'rejected');

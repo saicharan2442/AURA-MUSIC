@@ -1,4 +1,4 @@
-import type { Album, Artist, HomeFeed, SearchResults, Track } from '../types';
+import type { Album, SearchResults, Track } from '../types';
 import type { AlbumDetail, ArtistDetail, MusicProvider } from './provider';
 import { useSettings } from '../store/settings';
 import { cached, jget } from './http';
@@ -15,7 +15,7 @@ const API = 'https://www.googleapis.com/youtube/v3';
 
 // Helper to get the key and throw if missing
 function getKey() {
-  const key = useSettings.getState().youtubeKey.trim();
+  const key = (useSettings.getState().youtubeKey || '').trim();
   if (!key) throw new Error('YouTube API key is missing. Please add it in Settings.');
   return key;
 }

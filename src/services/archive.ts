@@ -1,4 +1,4 @@
-import type { Album, Artist, HomeFeed, SearchResults, Track } from '../types';
+import type { Album, SearchResults, Track } from '../types';
 import type { AlbumDetail, ArtistDetail, MusicProvider } from './provider';
 import { cached, jget } from './http';
 

@@ -186,7 +186,7 @@ export function Segmented<T extends string>({ options, value, onChange }: {
   );
 }
 
-export function SettingRow({ title, sub, children, first }: { title: string; sub?: string; children: ReactNode; first?: boolean }) {
+export function SettingRow({ title, sub, children, first }: { title: string; sub?: ReactNode; children: ReactNode; first?: boolean }) {
   return (
     <div className={cx('flex items-center justify-between gap-6 py-4 border-line', !first && 'border-t')}>
       <div className="min-w-0">
